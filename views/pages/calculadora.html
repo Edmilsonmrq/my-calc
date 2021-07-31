@@ -1,37 +1,56 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html>
   <head>
     <title>Calculadora</title>
     <meta charset="utf-8" />
+<style>
+ .btn{
+      background-color:#000fff;
+      padding: 10px 20px;
+      border-radius: 5px
+      }
+.btn1{
+     padding: 10px 20px;
+     border-radius: 5px
+     }
+.calculadora{
+     position: absolute;
+     background-color: #e6e6e6;
+     border-radius: 5px;
+     top: 200px;
+     left:  500px;
+     }
+</style>
   </head>
   <body onkeypress="manipularTeclado()">
+<div class="calculadora">
       <table>
           <tr>
-              <td colspan="6"><input type="text" id="display" value="0" disabled></td>
+              <td colspan="6"><input type="text" id="display" value="0" class="btn1" disabled></td>
           </tr>
           <tr>
-            <td><input type="button" value="7" onclick="atualizarDisplay(this)" /></td>
-            <td><input type="button" value="8" onclick="atualizarDisplay(this)" /></td>
-            <td><input type="button" value="9" onclick="atualizarDisplay(this)" /></td>
-            <td><input type="button" value="*" onclick="atualizarOperacao(this)" /></td>
+            <td><input type="button" value="7" class="btn1" onclick="atualizarDisplay(this)" /></td>
+            <td><input type="button" value="8" class="btn1" onclick="atualizarDisplay(this)" /></td>
+            <td><input type="button" value="9" class="btn1" onclick="atualizarDisplay(this)" /></td>
+            <td><input type="button" value="*" class="btn1" onclick="atualizarOperacao(this)" /></td>
         </tr>
         <tr>
-            <td><input type="button" value="4" onclick="atualizarDisplay(this)" /></td>
-            <td><input type="button" value="5" onclick="atualizarDisplay(this)" /></td>
-            <td><input type="button" value="6" onclick="atualizarDisplay(this)" /></td>
-            <td><input type="button" value="-" onclick="atualizarOperacao(this)" /></td>
+            <td><input type="button" value="4" class="btn1" onclick="atualizarDisplay(this)" /></td>
+            <td><input type="button" value="5" class="btn1" onclick="atualizarDisplay(this)" /></td>
+            <td><input type="button" value="6" class="btn1" onclick="atualizarDisplay(this)" /></td>
+            <td><input type="button" value="-" class="btn1" onclick="atualizarOperacao(this)" /></td>
         </tr>
         <tr>
-            <td><input type="button" value="1" onclick="atualizarDisplay(this)" /></td>
-            <td><input type="button" value="2" onclick="atualizarDisplay(this)" /></td>
-            <td><input type="button" value="3" onclick="atualizarDisplay(this)" /></td>
-            <td><input type="button" value="+" onclick="atualizarOperacao(this)" /></td>
+            <td><input type="button" value="1" class="btn1" onclick="atualizarDisplay(this)" /></td>
+            <td><input type="button" value="2" class="btn1" onclick="atualizarDisplay(this)" /></td>
+            <td><input type="button" value="3" class="btn1" onclick="atualizarDisplay(this)" /></td>
+            <td><input type="button" value="+" class="btn1" onclick="atualizarOperacao(this)" /></td>
         </tr>
         <tr>
-            <td><input type="button" value="C" onclick="limparDisplay()" /></td>
-            <td><input type="button" value="0" onclick="atualizarDisplay(this)" /></td>
-            <td><input type="button" value="=" onclick="calcularOperacao()" /></td>
-            <td><input type="button" value="/" onclick="atualizarOperacao(this)" /></td>
+            <td><input type="button" value="C" class="btn1" onclick="limparDisplay()" /></td>
+            <td><input type="button" value="0" class="btn1" onclick="atualizarDisplay(this)" /></td>
+            <td><input type="button" value="=" class="btn" onclick="calcularOperacao()" /></td> 
+            <td><input type="button" value="/" class="btn1" onclick="atualizarOperacao(this)" /></td>
         </tr>
       </table>
       <script>
@@ -68,6 +87,7 @@
                 atualizarDisplay({value: event.key});
         }
     </script>
+</div>
 
   </body>
 </html>
