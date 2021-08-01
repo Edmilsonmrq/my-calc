@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
   <head>
     <title>Calculadora</title>
@@ -6,19 +6,29 @@
 <style>
  .btn{
       background-color:#000fff;
-      padding: 10px 20px;
+      padding: 19px 19px;
       border-radius: 5px
       }
 .btn1{
-     padding: 10px 20px;
+     font-size: 18px;
+     padding: 19px 19px;
      border-radius: 5px
      }
 .calculadora{
      position: absolute;
      background-color: #e6e6e6;
      border-radius: 5px;
-     top: 200px;
-     left:  500px;
+     top: 50%;
+     left:  50%;
+     transform: translate(-50%, -50%);
+     }
+.resultado{
+     width: 200px;
+     background:rgb(252, 252, 252);
+     font-size: 18px;
+     margin: 4px;
+     color: #000000
+     border-radius: 5px;
      }
 </style>
   </head>
@@ -26,7 +36,7 @@
 <div class="calculadora">
       <table>
           <tr>
-              <td colspan="6"><input type="text" id="display" value="0" class="btn1" disabled></td>
+              <td colspan="6"><input type="text" id="display" value="0" class="resultado" disabled></td>
           </tr>
           <tr>
             <td><input type="button" value="7" class="btn1" onclick="atualizarDisplay(this)" /></td>
