@@ -4,20 +4,27 @@
     <title>Calculadora</title>
     <meta charset="utf-8" />
 <style>
+fundo{
+      background-color: #e6e6e6;
+      height: 100%;
+}
  .btn{
-      background-color:#000fff;
+      background-color: #ff0000; 
+      font-size: 18px;
       padding: 19px 19px;
-      border-radius: 5px
+      border-radius: 9px
       }
 .btn1{
+     background-color: #bdbdbd;
      font-size: 18px;
      padding: 19px 19px;
-     border-radius: 5px
+     border-radius: 9px
      }
 .calculadora{
      position: absolute;
-     background-color: #e6e6e6;
-     border-radius: 5px;
+     background-color: #848484;;
+     border-radius: 10px;
+     padding: 10px;
      top: 50%;
      left:  50%;
      transform: translate(-50%, -50%);
@@ -33,6 +40,7 @@
 </style>
   </head>
   <body onkeypress="manipularTeclado()">
+<div class="fundo">
 <div class="calculadora">
       <table>
           <tr>
@@ -97,6 +105,7 @@
                 atualizarDisplay({value: event.key});
         }
     </script>
+</div>
 </div>
 
   </body>
