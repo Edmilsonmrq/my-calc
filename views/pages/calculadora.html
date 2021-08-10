@@ -12,7 +12,7 @@
 .btn{
       background-color: #ff0000;
      font-size: 18px;
-     padding: 19px 19px;
+     padding: 19px 45px;
      border-radius: 9px
 }
 .btn1{
@@ -31,7 +31,7 @@
        transform: translate(-50%, -50%);
 }
 .resultado{
-            width: 200px;
+            width: 230px;
             padding: 5px;
             background:rgb(252, 252, 252);
             font-size: 18px;
@@ -50,10 +50,16 @@
 
             <input type="text" id="display" value="" class="resultado"><br/>
           
+            <input type="button" value="C" onclick="limparDisplay(value)"  class="btn1"/>
+            <input type="button" value="√" onclick="atualizarDisplay(value)" class="btn1"/>
+            <input type="button" value="%" onclick="atualizarDisplay(value)" class="btn1"/>
+            <input type="button" value="*" onclick="atualizarDisplay(value)" class="btn1"/>
+        <br/>
+
             <input type="button" value="7" onclick="atualizarDisplay(value)" class="btn1" />
             <input type="button" value="8" onclick="atualizarDisplay(value)"  class="btn1"/>
             <input type="button" value="9" onclick="atualizarDisplay(value)"  class="btn1"/>
-            <input type="button" value="*" onclick="atualizarDisplay(value)" class="btn1"/>
+            <input type="button" value="÷" onclick="atualizarDisplay(value)" class="btn1"/>
         <br/>
         
             <input type="button" value="4" onclick="atualizarDisplay(value)" class="btn1" />
@@ -68,10 +74,10 @@
             <input type="button" value="+" onclick="atualizarDisplay(value)" class="btn1"/>
         <br/>
         
-            <input type="button" value="C" onclick="limparDisplay(value)"  class="btn1"/>
+            
             <input type="button" value="0" onclick="atualizarDisplay(value)" class="btn1"/>
-            <input type="button" value="=" onclick="calcularOperacao()" class="btn"/>
-            <input type="button" value="/" onclick="atualizarDisplay(value)"   class="btn1"/>
+            <input type="button" value="," onclick="atualizarDisplay(value)" class="btn1"/>
+<input type="button" value="=" onclick="calcularOperacao()" class="btn"/>
         <br/>
     </form>
 </div>
