@@ -1,4 +1,4 @@
- 
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -12,8 +12,14 @@
 .btn{
       background-color: #ff0000;
      font-size: 18px;
-     padding: 19px 19px;
+     padding: 19px 70px;
      border-radius: 9px
+}
+.btn2{
+background-color: #bdbdbd;
+    font-size: 18px;
+    padding: 19px 50px;
+    border-radius: 9px
 }
 .btn1{
     background-color: #bdbdbd;
@@ -31,12 +37,12 @@
        transform: translate(-50%, -50%);
 }
 .resultado{
-            width: 200px;
+            width: 265px;
             padding: 5px;
             background:rgb(252, 252, 252);
             font-size: 18px;
             margin: 4px;
-            color: #000000
+            background-color: #bdbdbd;
             border-radius: 5px;
             }
 </style>
@@ -49,29 +55,39 @@
         <form name="calc">
 
             <input type="text" id="display" value="" class="resultado"><br/>
-          
+           
+
+            <input type="button" value=" (" onclick="atualizarDisplay(value)"  class="btn1"/>
+            <input type="button" value="." onclick="atualizarDisplay(value)" class="btn1"/>
+            <input type="button" value=") " onclick="atualizarDisplay(value)" class="btn1"/>
+            <input type="button" value="/" onclick="atualizarDisplay(value)" class="btn1"/>
+            <input type="button" value="C" onclick="limparDisplay(value)"  class="btn1"/>
+ 
+</br>
             <input type="button" value="7" onclick="atualizarDisplay(value)" class="btn1" />
             <input type="button" value="8" onclick="atualizarDisplay(value)"  class="btn1"/>
             <input type="button" value="9" onclick="atualizarDisplay(value)"  class="btn1"/>
             <input type="button" value="*" onclick="atualizarDisplay(value)" class="btn1"/>
+            <input type="button" value="&#8730" onclick="atualizarRaiz(value)"   class="btn1"/>
         <br/>
         
             <input type="button" value="4" onclick="atualizarDisplay(value)" class="btn1" />
             <input type="button" value="5" onclick="atualizarDisplay(value)" class="btn1"/>
             <input type="button" value="6" onclick="atualizarDisplay(value)" class="btn1"/>
             <input type="button" value="-" onclick="atualizarDisplay(value)"  class="btn1"/>
+            <input type="button" value="x²" onclick="atualizarDisplay('**2')" class="btn1"/>
         <br/>
         
             <input type="button" value="1" onclick="atualizarDisplay(value)"  class="btn1"/>
             <input type="button" value="2" onclick="atualizarDisplay(value)" class="btn1"/>
             <input type="button" value="3" onclick="atualizarDisplay(value)" class="btn1"/>
+            <input type="button" value="%" onclick="atualizarDisplay('/100')" class="btn1"/>
             <input type="button" value="+" onclick="atualizarDisplay(value)" class="btn1"/>
         <br/>
         
-            <input type="button" value="C" onclick="limparDisplay(value)"  class="btn1"/>
-            <input type="button" value="0" onclick="atualizarDisplay(value)" class="btn1"/>
-            <input type="button" value="=" onclick="calcularOperacao()" class="btn"/>
-            <input type="button" value="/" onclick="atualizarDisplay(value)"   class="btn1"/>
+            <input type="button" value="0" onclick="atualizarDisplay(value)"  class="btn2"/>
+            <input type="button" value="=" onclick="calcularOperacao()"   class="btn"/>
+            
         <br/>
     </form>
 </div>
@@ -81,6 +97,11 @@
             var  salvo= document.calc.display.value;
             document.calc.display.value = salvo + num ; 
         }
+        function atualizarRaiz(num){
+        var raiz = document.calc.display.value;
+        var resul = Math.sqrt(raiz);
+        document.calc.display.value = "√" + raiz + " = " + resul;
+}
         function limparDisplay(){
             document.getElementById("display").value= '';
         }
